@@ -1,0 +1,11 @@
+LAST ACTIVITY
+1. Created Model
+2. Create AppDbContext
+
+NEXT ACTIVITY
+1. Create secrets.json
+2. Modify appsettings.json
+3. Read secrets.json during Development
+4. Set Environment Variables for Deployment
+5. Add secrets.json to .gitignore:
+
