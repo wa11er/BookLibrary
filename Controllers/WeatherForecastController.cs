@@ -1,4 +1,6 @@
+using BookLibrary.Options;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace BookLibrary.Controllers
 {
@@ -12,10 +14,12 @@ namespace BookLibrary.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ConnectionStrings _connectionStrings;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IOptions<ConnectionStrings> connectionStrings)
         {
             _logger = logger;
+            _connectionStrings = connectionStrings.Value;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
